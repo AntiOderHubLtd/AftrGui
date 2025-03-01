@@ -27,5 +27,27 @@ end)
 Text of input - TextBox.Text
 ]]
 ```
-# 5 Add a checkbox.
+# 5. Add a checkbox.
+```lua
+local Checkbox = AddContent("Checkbox", "Text of checkbox", [[
+print("Checkbox value changed!")
+wait(100)
+]])
+```
+# 6. Add a toggle.
+```lua
+local Toggle = AddContent("Toggle", "Text of toggle", [[
+print("Value of checkbox: true!")
+]],[[
+print("Value of checkbox: false!")
+]])
+```
+# 7. Add a label.
+```lua
+local TextLabel = AddContent("TextLabel")
+TextLabel.Text = "Your text here"
+```
+Enjoy the simple library!
+Aftr.
+
 
