@@ -149,7 +149,7 @@ function AddContent(type, text, script, script2)
     TextButton.MouseButton1Click:Connect(function()
     loadstring(script)()
     end)
- elseif type == "Toogle" then
+ elseif type == "Checkbox" then
     local TextLabel = Instance.new("TextLabel") 
     TextLabel.Parent = Frame
     TextLabel.BackgroundTransparency = 1
@@ -175,23 +175,23 @@ function AddContent(type, text, script, script2)
     TextButton.TextScaled = true
     TextButton.TextWrapped = false
 
-    local Toogle = false
+    local Checkbox = false
     TextButton.MouseButton1Click:Connect(function()
     if TextButton.Text == "□" then
        TextButton.Text = "■"
        TextButton.TextSize = 22
        TextButton.Position = UDim2.new(0.8103,0,0.148)
-       Toogle = true
+       Checkbox = true
     else
        TextButton.Text = "□"
        TextButton.TextSize = 24
        TextButton.Position = UDim2.new(0.805,0,0.15)
-       Toogle = false
+       Checkbox = false
     end
     end)
     local BetterLoopOperator = false
     game:GetService("RunService").RenderStepped:Connect(function()
-    if Toogle == true and BetterLoopOperator == false then
+    if Checkbox == true and BetterLoopOperator == false then
        BetterLoopOperator = true
        pcall(function()
        loadstring(script)()
@@ -199,7 +199,7 @@ function AddContent(type, text, script, script2)
        BetterLoopOperator = false
     end
     end)
- elseif type == "Switch" then
+ elseif type == "Toggle" then
     local TextLabel = Instance.new("TextLabel") 
     TextLabel.Parent = Frame
     TextLabel.BackgroundTransparency = 1
